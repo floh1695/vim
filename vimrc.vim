@@ -20,6 +20,7 @@ set number " line numbers
 " set showcmd
 set cursorline " highlight current line
 set showmatch " show matching brace
+set colorcolumn=100,120 " show columns at these colomns
 
 """ interaction
 set wildmenu " vim native autocomplete
@@ -30,9 +31,12 @@ set lazyredraw " redraw only when needed
 """ searching
 set incsearch " search as characters are entered
 set hlsearch " highlight search
+set ignorecase " ignore case by default
+set smartcase " case insensitive search unless an uppercase letter is used
 
 """ folding
 " set foldenable " enable folding
+set nofoldenable " keep folds open by default
 " set foldnestmax=10 " max number of folds
 " set foldmethod=indent " create folds based on indentation
 " nnoremap <space> za " open/close fold
