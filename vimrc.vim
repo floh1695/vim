@@ -17,6 +17,7 @@ set tabstop=4 " visual length of a tab
 
 """ ui controls
 set number " line numbers
+set relativenumber " use relative line numbers
 " set showcmd
 set cursorline " highlight current line
 set showmatch " show matching brace
@@ -40,3 +41,6 @@ set nofoldenable " keep folds open by default
 " set foldnestmax=10 " max number of folds
 " set foldmethod=indent " create folds based on indentation
 " nnoremap <space> za " open/close fold
+
+""" filetype specific configurations
+runtime ./filetype/haskell.vim
