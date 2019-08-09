@@ -43,4 +43,4 @@ set nofoldenable " keep folds open by default
 " nnoremap <space> za " open/close fold
 
 """ filetype specific configurations
-runtime ./filetype/haskell.vim
+source ~/.vim/filetype/haskell.vim
