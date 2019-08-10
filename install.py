@@ -23,16 +23,21 @@ class InstallRule:
 
         self.delete()
 
-        isDir = source.is_dir()
-        if isDir:
+        isDirectory = source.is_dir()
+        if isDirectory:
             shutil.copytree(source, target)
         else:
             shutil.copyfile(source, target)
 
     def delete(self):
-        target = self.target
-        isDir = target.is_dir()
-        if isDir:
+        target = self.target 
+
+        exists = target.exists()
+        if not exists:
+            return
+
+        isDirectory = target.is_dir()
+        if isDirectory:
             shutil.rmtree(target)
         else:
             target.unlink()

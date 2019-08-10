@@ -44,3 +44,4 @@ set nofoldenable " keep folds open by default
 
 """ filetype specific configurations
 source ~/.vim/filetype/haskell.vim
+source ~/.vim/filetype/python.vim
