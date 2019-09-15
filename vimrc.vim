@@ -29,7 +29,7 @@ set relativenumber " use relative line numbers
 " set showcmd
 set cursorline " highlight current line
 set showmatch " show matching brace
-set colorcolumn=100,120 " show columns at these colomns
+set colorcolumn=80,100,120 " show columns at these colomns
 
 """ interaction
 set wildmenu " vim native autocomplete
