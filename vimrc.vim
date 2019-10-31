@@ -15,6 +15,9 @@ else
 	colorscheme desert " soft colors
 endif
 
+set list
+set listchars=tab:>-,trail:.
+
 """ syntax processing
 syntax enable " enable syntax processing
 
