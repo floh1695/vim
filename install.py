@@ -16,7 +16,7 @@ class InstallRule:
   def install(self):
     source = self.source
     target = self.target
-    
+
     if verbose:
       message = 'Installing ({}) to ({})'.format(source, target)
       print(message)
