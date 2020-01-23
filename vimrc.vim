@@ -4,11 +4,11 @@ if has('gui running')
   colorscheme evening " soft dark, high contrast
 
   if has("gui_gtk2")
-  	set guifont=Inconsolata\ 12
+    set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
-  	set guifont=Menlo\ Regular:h14
+    set guifont=Menlo\ Regular:h14
   elseif has("gui_win32")
-  	set guifont=Hack:h10:cANSI:qDRAFT,Consolas:h11:cANSI
+    set guifont=Hack:h10:cANSI:qDRAFT,Consolas:h11:cANSI
   endif
 else
   """ if vim
@@ -32,7 +32,7 @@ set relativenumber " use relative line numbers
 " set showcmd
 set cursorline " highlight current line
 set showmatch " show matching brace
-set colorcolumn=80,100,120 " show columns at these colomns
+set colorcolumn=60,80,100,120 " show columns at these colomns
 
 """ interaction
 set wildmenu " vim native autocomplete
