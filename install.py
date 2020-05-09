@@ -1,11 +1,34 @@
 #!/usr/bin/python3
 
+import argparse
 import shutil
 import pathlib
 
-verbose = True
+parser = argparse.ArgumentParser(
+  description='Install vim configuration files'
+)
+parser.add_argument(
+  '-v',
+  '--verbose',
+  help='Print verbose output?',
+  action='store_const',
+  const=True,
+  default=False
+)
+parser.add_argument(
+  '-m',
+  '--home',
+  help='',
+  action='store',
+  default=None
+)
 
-homeRoot = pathlib.Path.home()
+args = parser.parse_args()
+
+verbose = args.verbose
+homeRoot = pathlib.Path.home() \
+  if args.home is None \
+  else pathlib.Path(args.home)
 vimRoot = pathlib.Path(homeRoot, '.vim')
 
 class InstallRule:
@@ -47,12 +70,12 @@ def main():
     InstallRule(
       ['vimrc.vim'],
       [vimRoot, 'vimrc.vim']
-      ),
+    ),
     InstallRule(
       ['filetype'],
       [vimRoot, 'filetype']
-      )
-    ]
+    )
+  ]
 
   for rule in rules:
     rule.install()
