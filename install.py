@@ -66,6 +66,8 @@ class InstallRule:
       target.unlink()
 
 def main():
+  vimRoot.mkdir(parents=True, exist_ok=True)
+
   rules = [
     InstallRule(
       ['vimrc.vim'],
