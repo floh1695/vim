@@ -46,6 +46,9 @@ set hlsearch " highlight search
 set ignorecase " ignore case by default
 set smartcase " case insensitive search unless an uppercase letter is used
 
+""" Related to backspaces
+set backspace=indent,eol,start
+
 """ folding
 " set foldenable " enable folding
 set nofoldenable " keep folds open by default
